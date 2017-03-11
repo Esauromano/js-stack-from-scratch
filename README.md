@@ -1,4 +1,4 @@
-# JavaScript Stack from Scratch
+# Stack JavaScript desde Cero
 
 [![Build Status](https://travis-ci.org/verekia/js-stack-from-scratch.svg?branch=master)](https://travis-ci.org/verekia/js-stack-from-scratch)
 [![Release](https://img.shields.io/github/release/verekia/js-stack-from-scratch.svg?style=flat-square)](https://github.com/verekia/js-stack-from-scratch/releases)
@@ -16,23 +16,23 @@
 [![Webpack](/img/webpack-padded-90.png)](https://webpack.github.io/)
 [![Bootstrap](/img/bootstrap-padded-90.png)](http://getbootstrap.com/)
 
-Welcome to my modern JavaScript stack tutorial: **JavaScript Stack from Scratch**.
+Bienvenido a mi tutorial (@verekia) sobre el stack javascript: ** Stack Javascript desde Cero**.
 
-> 🎉 **This is the V2 of the tutorial, major changes happened since the 2016 release. Check the [Change Log](/CHANGELOG.md)!**
+> 🎉 **Esta es la V2 del tutorial, con grandes cambios desde la edición de 2016. Puede ver la [Lista de Cambios](/CHANGELOG.md)!**
 
-This is a straight-to-the-point guide to assembling a JavaScript stack. It requires some general programming knowledge, and JavaScript basics. **It focuses on wiring tools together** and giving you the **simplest possible example** for each tool. You can see this tutorial as *a way to write your own boilerplate from scratch*. Since the goal of this tutorial is to assemble various tools, I do not go into details about how these tools work individually. Refer to their documentation or find other tutorials if you want to acquire deeper knowledge in them.
+Esta es una guía orientada a ensamblar un stack JavaScript. Requiere algunos conocimientos de programación general, y básicos de JavaScript. **Se centra en herramientas que abordaremos juntos** y ofreciendole el **ejemplo más simple posible** para cada herramientas. Puede ver este tutorial como *una manera de escribir su propia boilerplate desde cero*. Debido a que, el objetivo de este tutorial es ensamblar varias herramientas, no voy a entrar en detalles sobre como cada una trabaja individualmente. Consulte su documentación o encuentre otros tutoriales si desea adquirir un conocimiento más profundo en ellos.
 
-You don't need to use this entire stack if you build a simple web page with a few JS interactions of course (a combination of Browserify/Webpack + Babel + jQuery is enough to be able to write ES6 code in different files), but if you want to build a web app that scales, and need help setting things up, this tutorial will work great for you.
+No necesita usar este stack entero si va a construir una simple página web con una pocas interacciones de JS interactions obviamente (una combinación de Browserify/Webpack + Babel + jQuery es suficiente  para poder escribir código ES6 en archivos diferentes), pero si quieres crear una aplicación web que sea escalable, y necesitas ayuda para configurar las cosas, este tutorial será muy bueno para ti.
 
-A big chunk of the stack described in this tutorial uses React. If you are beginning and just want to learn React, [create-react-app](https://github.com/facebookincubator/create-react-app) will get you up and running with a React environment very quickly with a pre-made configuration. I would for instance recommend this approach to someone who arrives in a team that's using React and needs to catch up with a learning playground. In this tutorial you won't use a pre-made configuration, because I want you to understand everything that's happening under the hood.
+Una gran parte de lo descrito en este tutorial usa React. Si estas comenzando y quieres aprender React, [create-react-app](https://github.com/facebookincubator/create-react-app) le permitirá levantar y correr rápidamente un entorno de React ya preconfigurado. Recomiendo este enfoque para quien se este incorporando a un equipo que este usando React y necesite ponerse al día con un ambiente de pruebas. En este tutorial no lo usaremos, porque quiero que entienda lo que esta sucede debajo de todo.
 
-Code examples are available for each chapter, and you can run them all with `yarn && yarn start`. I recommend writing everything from scratch yourself by following the **step-by-step instructions** though.
+Los códigos de ejemplos estan disponibles en cada capítulo, puedes correlos todos usando `yarn && yarn start`. Sin embargo, recomiendo que escriba todo desde cero siguiendo las **instrucciones paso a paso**.
 
-Final code available in the [JS-Stack-Boilerplate repository](https://github.com/verekia/js-stack-boilerplate), and in the [releases](https://github.com/verekia/js-stack-from-scratch/releases). There is a [live demo](https://js-stack.herokuapp.com/) too.
+El código final esta disponible en el [repositorio JS-Stack-Boilerplate](https://github.com/verekia/js-stack-boilerplate), en el [releases](https://github.com/verekia/js-stack-from-scratch/releases). Así como también un [demo en vivo](https://js-stack.herokuapp.com/).
 
-Works on Linux, macOS, and Windows.
+Funciona en Linux, macOS, y Windows.
 
-## Table of contents
+## Tabla de Contenidos
 
 [01 - Node, Yarn, `package.json`](/tutorial/01-node-yarn-package-json.md#readme)
 
@@ -52,19 +52,19 @@ Works on Linux, macOS, and Windows.
 
 [09 - Travis, Coveralls, Heroku](/tutorial/09-travis-coveralls-heroku.md#readme)
 
-## Coming up next
+## Proximamente
 
-Setting up your editor (Atom first), MongoDB, Progressive Web App.
+Configurando tu editor (Atom), MongoDB, Progressive Web App.
 
-## Translations
+## Traducciones
 
-If you want to add your translation, please read the [translation recommendations](/how-to-translate.md) to get started!
+Si deseas agregar tu traducción, por favor lea las [recomendaciones de traducción](/how-to-translate.md) para comenzar.
 
 ### V2
 
 Your link here soon ;)
 
-Check out the [ongoing translations](https://github.com/verekia/js-stack-from-scratch/issues/147).
+Consultas las [traducciones en curso](https://github.com/verekia/js-stack-from-scratch/issues/147).
 
 ### V1
 
@@ -76,6 +76,6 @@ Check out the [ongoing translations](https://github.com/verekia/js-stack-from-sc
 
 ## Credits
 
-Created by [@verekia](https://twitter.com/verekia) – [verekia.com](http://verekia.com/).
+Creado por [@verekia](https://twitter.com/verekia) – [verekia.com](http://verekia.com/).
 
 License: MIT
