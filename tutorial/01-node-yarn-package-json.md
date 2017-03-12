@@ -21,7 +21,7 @@ Si desea cualquier versión de Node > 6.5.0.
 
 ## NVM
 
-Si Node esta ya instalado, o si desea más flexibilidad, instale NVM ([Node Version Manager](https://github.com/creationix/nvm)), y gracias a NVM instale y use la versión ḿás reciente de Node.
+Si Node esta ya instalado, o si desea más flexibilidad, instale NVM ([Node Version Manager](https://github.com/creationix/nvm)), y gracias a NVM instale y use la versión más reciente de Node.
 
 ## NPM
 
