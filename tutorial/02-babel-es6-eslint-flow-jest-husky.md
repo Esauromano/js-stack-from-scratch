@@ -37,7 +37,7 @@ Si pruebas corriendo `yarn start` ahora, debería impirmir la salida correcta, p
 }
 ```
 
-🏁 `yarn start` debería funcionar todavía, pero en realidad está haciendo algo ahora. Realmente no podemos saber si es así, ya que estamos usando `babel-node` para interpretar el código ES6 sobre la marcha. Pronto tendrás una prueba de que tu código ES6 se transforma realmente cuando llegas a la sección [Sintaxis Módulos ES6](#Sintaxis-modulos-ES6) de este capítulo.
+🏁 `yarn start` debería funcionar todavía, pero en realidad está haciendo algo ahora. Realmente no podemos saber si es así, ya que estamos usando `babel-node` para interpretar el código ES6 sobre la marcha. Pronto tendrás una prueba de que tu código ES6 se transforma realmente cuando llegas a la sección [Sintaxis Módulos ES6](#sintaxis-modulos-es6) de este capítulo.
 
 ## ES6
 
@@ -79,15 +79,15 @@ Como puedes apreciar, a diferencia del paquete hecho por la comunidad `color` qu
 
 ### Sintaxis modulos ES6
 
-Here we simply replace `const Dog = require('./dog')` by `import Dog from './dog'`, which is the newer ES6 modules syntax (as opposed to "CommonJS" modules syntax). It is currently not natively supported by NodeJS, so this is your proof that Babel processes those ES6 files correctly.
+Aquí simplemente reemplaza `const Dog = require('./dog')` por `import Dog from './dog'`, esta es la nueva sintaxis de modules de ES6 (En contraposición a la sintaxis de los módulos "CommonJS"). Actualmente, es soportada forma nativa por NodeJS, lo que la hace la prueba de que Babel procesa correctamente esos archivos ES6.
 
-In `dog.js`, we also replace `module.exports = Dog` by `export default Dog`
+En `dog.js`, también reemplaza `module.exports = Dog` por `export default Dog`
 
-🏁 `yarn start` should still print "Wah wah, I am Toby".
+🏁 `yarn start` todavía debería imprimir "Wah wah, I am Toby".
 
 ## ESLint
 
-> 💡 **[ESLint](http://eslint.org)** is the linter of choice for ES6 code. A linter gives you recommendations about code formatting, which enforces style consistency in your code, and code you share with your team. It's also a great way to learn about JavaScript by making mistakes that ESLint will catch.
+> 💡 **[ESLint](http://eslint.org)** es el linter de elegido para código ES6. Un linter nos ofrece recomendaciones sobre el formato del código, asegurando un estilo consistenten en su código y el código que compartes con sus compañeros. También es una excelente manera de aprender sobre JavaScript al cometer errores que ESLint ira encontrando.
 
 ESLint works with *rules*, and there are [many of them](http://eslint.org/docs/rules/). Instead of configuring the rules we want for our code ourselves, we will use the config created by Airbnb. This config uses a few plugins, so we need to install those as well.
 
