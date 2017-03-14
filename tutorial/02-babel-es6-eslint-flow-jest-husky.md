@@ -1,33 +1,33 @@
 # 02 - Babel, ES6, ESLint, Flow, Jest, and Husky
 
-Code for this chapter available [here](https://github.com/verekia/js-stack-walkthrough/tree/master/02-babel-es6-eslint-flow-jest-husky).
+El código para este capítulo esta disponible [aquí](https://github.com/verekia/js-stack-walkthrough/tree/master/02-babel-es6-eslint-flow-jest-husky).
 
-We're now going to use some ES6 syntax, which is a great improvement over the "old" ES5 syntax. All browsers and JS environments understand ES5 well, but not ES6. That's where a tool called Babel comes to the rescue!
+Vamos a usar un poco de la sintaxis de ES6, la cual aporta una gran mejora en comparación con la sintaxis "antigua" de ES5. No obstante, todos los navegadores y entornos JS comprenden bien ES5, pero no ES6. Es allí donde una herramienta llamada Babel ¡viene al rescate!
 
 ## Babel
 
-> 💡 **[Babel](https://babeljs.io/)** is a compiler that transforms ES6 code (and other things like React's JSX syntax) into ES5 code. It is very modular and can be used in tons of different [environments](https://babeljs.io/docs/setup/). It is by far the preferred ES5 compiler of the React community.
+> 💡 **[Babel](https://babeljs.io/)**  es un compilar que transforma el código ES6 (y optras cosas como las sintaxis JSX de React) en código ES5. Es muy modular y puede ser usado en miles de [entornos](https://babeljs.io/docs/setup/) diferentes. Es por mucho el compilador ES% preferido por la comunidad de React.
 
-- Move your `index.js` into a new `src` folder. This is where you will write your ES6 code. Remove the previous `color`-related code in `index.js`, and replace it with a simple:
+- Mueve tu `index.js` a una nueva carpeta llamada `src`. Aquí es donde escribiras tu código ES6. Reemplaza el código anterior relacionado a `color` en `index.js` por:
 
 ```js
 const str = 'ES6'
 console.log(`Hello ${str}`)
 ```
 
-We're using a *template string* here, which is an ES6 feature that lets us inject variables directly inside the string without concatenation using `${}`. Note that template strings are created using **backquotes**.
+Estamos usando  un *template string*, el cual e suna nueva característica de ES6 que nos permite inyectar variables dentro de los string sin concatenacion, usando `${}`. Note que los template strings son creados usando **backquotes**.
 
-- Run `yarn add --dev babel-cli` to install the CLI interface for Babel.
+- Corra `yarn add --dev babel-cli` para instalar la CLI para Babel.
 
-Babel CLI comes with [two executables](https://babeljs.io/docs/usage/cli/): `babel`, which compiles ES6 files into new ES5 files, and `babel-node`, which you can use to replace your call to the `node` binary and execute ES6 files directly on the fly. `babel-node` is great for development but it is heavy and not meant for production. In this chapter we are going to use `babel-node` to set up the development environment, and in the next one we'll use `babel` to build ES5 files for production.
+La CLI de Babel trae consigo [dos ejecutables](https://babeljs.io/docs/usage/cli/): `babel`, el cual compila los archivos ES6 a nuevos archivos ES5, y `babel-node`, el cual puede usar para reemplazar el llamado del binario de `node` y ejecutar archivos ES6 directamente sobre la marcha. `babel-node` es excelente para desarrollo pero es muy pesado y no esta orientado para su uso en producción. En este capítulo vamos a usar `babel-node` para preparar nuestro entorno de desarrrollo y en el siguiente usaremos `babel` para construri los archivos ES5 para producción.
 
-- In `package.json`, in your `start` script, replace `node .` by `babel-node src` (`index.js` is the default file Node looks for, which is why we can omit `index.js`).
+- En el `package.json`, en tu script `start`, reemplaza `node .` por `babel-node src` (`index.js` es el archivo por defecto que Node buscará, por eso podemos omitir `index.js`).
 
-If you try to run `yarn start` now, it should print the correct output, but Babel is not actually doing anything. That's because we didn't give it any information about which transformations we want to apply. The only reason it prints the right output is because Node natively understands ES6 without Babel's help. Some browsers or older versions of Node would not be so successful though!
+Si pruebas corriendo `yarn start` ahora, debería impirmir la salida correcta, pero Babel no esta haciendo nada actualmente. Eso se debe a que, no le dimos ninguna información sobre cuales transformaciones queriamos aplicar. La razón de que haya impreso la salida correcta es porque Node nativamente entiende ES6 son ayuda de Babel. En cambio algunos navegadores o viejas versiones de Node el resultado no será el correcto.
 
-- Run `yarn add --dev babel-preset-env` to install a Babel preset package called `env`, which contains configurations for the most recent ECMAScript features supported by Babel.
+- Corre `yarn add --dev babel-preset-env` Para instalar un paquete predefinido de Babel llamado `env`, que posee las configuraciones para las características más recientes de ECMAScript soportadas por Babel.
 
-- Create a `.babelrc` file at the root of your project, which is a JSON file for your Babel configuration. Write the following to it to make Babel use the `env` preset:
+- Crea un archivo `.babelrc` en la raíz de tu proyecto, el cual es un archivo JSON para tu configuración de Babel. Escribe lo siguiente para hacer que Babel user el `env`:
 
 ```json
 {
@@ -37,15 +37,15 @@ If you try to run `yarn start` now, it should print the correct output, but Babe
 }
 ```
 
-🏁 `yarn start` should still work, but it's actually doing something now. We can't really tell if it is though, since we're using `babel-node` to interpret ES6 code on the fly. You'll soon have a proof that your ES6 code is actually transformed when you reach the [ES6 modules syntax](#the-es6-modules-syntax) section of this chapter.
+🏁 `yarn start` debería funcionar todavía, pero en realidad está haciendo algo ahora. Realmente no podemos saber si es así, ya que estamos usando `babel-node` para interpretar el código ES6 sobre la marcha. Pronto tendrás una prueba de que tu código ES6 se transforma realmente cuando llegas a la sección [Sintaxis Módulos ES6](#Sintaxis-modulos-ES6) de este capítulo.
 
 ## ES6
 
-> 💡 **[ES6](http://es6-features.org/)**: The most significant improvement of the JavaScript language. There are too many ES6 features to list them here but typical ES6 code uses classes with `class`, `const` and `let`, template strings, and arrow functions (`(text) => { console.log(text) }`).
+> 💡 **[ES6](http://es6-features.org/)**: Es la mejora más significativa del lenguaje JavaScript. Hay muchas nuevas características ES6 para listarlas todas aquí, pero el código ES6 tipicamente usa clases con `class`, `const` and `let`, template strings, and arrow functions (`(text) => { console.log(text) }`).
 
-### Creating an ES6 class
+### Creando una Clase en ES6
 
-- Create a new file, `src/dog.js`, containing the following ES6 class:
+- Crea un nuevo archivo, `src/dog.js`, que contenga la siguiente clase ES6:
 
 ```js
 class Dog {
@@ -61,9 +61,9 @@ class Dog {
 module.exports = Dog
 ```
 
-It should not look surprising to you if you've done OOP in the past in any language. It's relatively recent for JavaScript though. The class is exposed to the outside world via the `module.exports` assignment.
+Esto no sería nada nuevo si has tenido la oportunidad de usar OOP (Programación Orientada a Objetos) en cual otro lenguaje. Sin embargo, es algo relativamente nuevo en JavaScript. LA clase es expuesta al mundo entero vía asignación al `module.exports`.
 
-In `src/index.js`, write the following:
+En `src/index.js`, escribe lo siguiente:
 
 ```js
 const Dog = require('./dog')
@@ -73,11 +73,11 @@ const toby = new Dog('Toby')
 console.log(toby.bark())
 ```
 
-As you can see, unlike the community-made package `color` that we used before, when we require one of our files, we use `./` in the `require()`.
+Como puedes apreciar, a diferencia del paquete hecho por la comunidad `color` que usamos anteriormente, En el caso que requiramos uno de nuestros archivos, usaremos `./` en el `require()`.
 
-🏁 Run `yarn start` and it should print "Wah wah, I am Toby".
+🏁 Corre `yarn start` y debería imprimir "Wah wah, I am Toby".
 
-### The ES6 modules syntax
+### Sintaxis modulos ES6
 
 Here we simply replace `const Dog = require('./dog')` by `import Dog from './dog'`, which is the newer ES6 modules syntax (as opposed to "CommonJS" modules syntax). It is currently not natively supported by NodeJS, so this is your proof that Babel processes those ES6 files correctly.
 
