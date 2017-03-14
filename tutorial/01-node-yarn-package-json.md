@@ -1,6 +1,6 @@
 # 01 - Node, Yarn, y `package.json`
 
-El código para este capítulo esta disponible [aquí](https://github.com/JMEspiz/js-stack-walkthrough/tree/master/01-node-yarn-package-json).
+El código para este capítulo esta disponible [aquí](https://github.com/verekia/js-stack-walkthrough/tree/master/01-node-yarn-package-json).
 
 en esta sección configuraremos Node, Yarn, un archivo `package.json` básico y probaremos un paquete.
 
