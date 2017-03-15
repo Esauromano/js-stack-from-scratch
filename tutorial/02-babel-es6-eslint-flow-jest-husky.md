@@ -89,19 +89,19 @@ En `dog.js`, también reemplaza `module.exports = Dog` por `export default Dog`
 
 > 💡 **[ESLint](http://eslint.org)** es el linter de elegido para código ES6. Un linter nos ofrece recomendaciones sobre el formato del código, asegurando un estilo consistenten en su código y el código que compartes con sus compañeros. También es una excelente manera de aprender sobre JavaScript al cometer errores que ESLint ira encontrando.
 
-ESLint works with *rules*, and there are [many of them](http://eslint.org/docs/rules/). Instead of configuring the rules we want for our code ourselves, we will use the config created by Airbnb. This config uses a few plugins, so we need to install those as well.
+ESLint trabaja con *rules (reglas)*,  hay [muchas de ellas](http://eslint.org/docs/rules/). No obstante, en vez de configurar las reglas que queramos para nuestro código, usaremos la configuración creada por Airbnb. Esta configuración usa algunos plugins que necesitamos instalar para que funcionen correctamente.
 
-Check out Airbnb's most recent [instructions](https://www.npmjs.com/package/eslint-config-airbnb) to install the config package and all its dependencies correctly. As of 2017-02-03, they recommend using the following command in your terminal:
+Consulte las [instructiones](https://www.npmjs.com/package/eslint-config-airbnb) más recientes de Airbnb para instalar el paquete de configuración y sus respectivas dependencias correctamente. A partir de 2017-02-03, recomiendan el uso del siguiente comando en su terminal:
 
 ```sh
 npm info eslint-config-airbnb@latest peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev eslint-config-airbnb@latest
 ```
 
-It should install everything you need and add `eslint-config-airbnb`, `eslint-plugin-import`, `eslint-plugin-jsx-a11y`, and `eslint-plugin-react` to your `package.json` file automatically.
+Con esto se debería instalar todo lo necesario y agregar `eslint-config-airbnb`, `eslint-plugin-import`, `eslint-plugin-jsx-a11y`, y `eslint-plugin-react` a su archivo`package.json` automaticamente.
 
-**Note**: I've replaced `npm install` by `yarn add` in this command. Also, this won't work on Windows, so take a look at the `package.json` file of this repository and just install all the ESLint-related dependencies manually using `yarn add --dev packagename@^#.#.#` with `#.#.#` being the versions given in `package.json` for each package.
+**Nota**: He reemplazado `npm install` por `yarn add` en este comando. Adicionalmente,  esto no funcionará en Windows, por tanto revise el archivo `package.json` de este repositorio e instale todas las dependencias relacionadas con ESLint manualemnte usando `yarn add --dev packagename@^#.#.#` donde `#.#.#` sea la versión encontrada en el `package.json` para cada paquete.
 
-- Create an `.eslintrc.json` file at the root of your project, just like we did for Babel, and write the following to it:
+- Crea un archivo `.eslintrc.json` en la raiz de su proyecto, tal cual como hicimos para Babel, y escribe lo siguiente en el:
 
 ```json
 {
@@ -109,11 +109,11 @@ It should install everything you need and add `eslint-config-airbnb`, `eslint-pl
 }
 ```
 
-We'll create an NPM/Yarn script to run ESLint. Let's install the `eslint` package to be able to use the `eslint` CLI:
+Crearemos un script NPM/Yarn para correr ESLint. Instalemos el paquete `eslint` para poder usar la CLI de `eslint`:
 
 - Run `yarn add --dev eslint`
 
-Update the `scripts` of your `package.json` to include a new `test` task:
+Actualiza el `scripts` de tu `package.json` para incluir una nueva tarea llamada `test`:
 
 ```json
 "scripts": {
@@ -122,13 +122,13 @@ Update the `scripts` of your `package.json` to include a new `test` task:
 },
 ```
 
-Here we just tell ESLint that want to lint all JavaScript files under the `src` folder.
+Esto le dirá a ESLint que queremos revisar todos los archivos JavaScript dentro de la carpeta `src`.
 
-We will use this standard `test` task to run a chain of all the commands that validate our code, whether it's linting, type checking, or unit testing.
+Usaremos la tarea `test` estándar para correr todos los comandos que validarán nuestro código, ya sea para hacer linting, vericar tipado, o test unitarios.
 
-- Run `yarn test`, and you should see a whole bunch of errors for missing semicolons, and a warning for using `console.log()` in `index.js`. Add `/* eslint-disable no-console */` at the top of our `index.js` file to allow the use of `console` in this file.
+- Correr `yarn test`, y deberías ver un montón de errores por falta de punto y coma, y advertencias para usar `console.log()` en `index.js`. Agrega `/* eslint-disable no-console */`en la parte superior del archivo`index.js` para permitir el uso de `console` en este archivo.
 
-**Note**: If you're on Windows, make sure you configure your editor and Git to use Unix LF line endings and not Windows CRLF. If your project is only used in Windows environments, you can add `"linebreak-style": [2, "windows"]` in ESLint's `rules` array (see the example below) to enforce CRLF instead.
+**Nota**: Si estas en Windows, asegúrese de configurar su editor y Git para utilizar terminaciones de línea Unix LF y no Windows CRLF. Si tu proyecto es solo usado en entornos Windows, puedes agregar `"linebreak-style": [2, "windows"]` en el array de `rules` de ESLint (Vea el ejemplo a continuación) para reforzar CRLF en su lugar.
 
 ### Semicolons
 
