@@ -47,6 +47,7 @@ curl -o- -L https://yarnpkg.com/install.sh | bash
 - Corra `yarn init` y responda las preguntas (`yarn init -y` para saltarse todas las preguntas), para generar un archivo `package.json` automaticamente.
 
 Aquí puede ver un `package.json` básico que usaremos en este tutorial:
+) para tu Sistema Operativp. Recomiendo usar el **Script de instalación** desde la tab de *Alternativas* si esta usando macOS o Unix, para [evitar](https://github.com/yarnpkg/yarn/issues/1505) confiar en otros manejadores de paquetes:
 
 ```json
 {

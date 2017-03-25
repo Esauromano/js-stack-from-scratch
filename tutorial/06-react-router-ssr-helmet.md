@@ -303,7 +303,7 @@ Here is our controller. It would typically make business logic and database call
 ```js
 // @flow
 
-import * as Immutable from 'immutable'
+import Immutable from 'immutable'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
@@ -408,7 +408,7 @@ export default renderApp
 - Edit `src/client/index.jsx` to use that preloaded state:
 
 ```js
-import * as Immutable from 'immutable'
+import Immutable from 'immutable'
 // [...]
 
 /* eslint-disable no-underscore-dangle */
@@ -458,7 +458,7 @@ const renderApp = (/* [...] */) => {
 }
 ```
 
-React Helmet uses [react-side-effect](https://github.com/gaearon/react-side-effect)'s `rewind` to pull out some data from the rendering of our app, which will soon contain some `<Helmet />` components. Those `<Helmet />` components are where we set the `title` and other `head` details for each page.
+React Helmet uses [react-side-effect](https://github.com/gaearon/react-side-effect)'s `rewind` to pull out some data from the rendering of our app, which will soon contain some `<Helmet />` components. Those `<Helmet />` components are where we set the `title` and other `head` details for each page. Note that `Helmet.rewind()` *must* come after `ReactDOMServer.renderToString()`.
 
 - Edit `src/shared/app.jsx` like so:
 
