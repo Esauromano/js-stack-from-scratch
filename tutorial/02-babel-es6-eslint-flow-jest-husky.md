@@ -154,17 +154,17 @@ Soy consciente de que algunos de ustedes querrán seguir utilizando puntos y com
 
 ### Compat
 
-[Compat](https://github.com/amilajack/eslint-plugin-compat) is a neat ESLint plugin that warns you if you use some JavaScript APIs that are not available in the browsers you need to support. It uses [Browserslist](https://github.com/ai/browserslist), which relies on [Can I Use](http://caniuse.com/).
+[Compat](https://github.com/amilajack/eslint-plugin-compat) es un plugin de ESLint que te advierte si estas utilizando algunas APIs de Javascript que no están disponibles en los navegadores que quieres soportar. Utiliza [Browserslist](https://github.com/ai/browserslist), que está basado en [Can I Use](http://caniuse.com/).
 
-- Run `yarn add --dev eslint-plugin-compat`
+- Ejecuta `yarn add --dev eslint-plugin-compat`
 
-- Add the following to your `package.json`, to indicate that we want to support browsers that have more than 1% market share:
+- Agrega lo siguiente a tu `package.json`, para indicar que queremos dar soporte a navegadores con mas del 1% de la cuota de mercado.
 
 ```json
 "browserslist": ["> 1%"],
 ```
 
-- Edit your `.eslintrc.json` file like so:
+- Edita tu archivvvvo `.eslintrc.json`:
 
 ```json
 {
@@ -180,7 +180,7 @@ Soy consciente de que algunos de ustedes querrán seguir utilizando puntos y com
 }
 ```
 
-You can try the plugin by using `navigator.serviceWorker` or `fetch` in your code for instance, which should raise an ESLint warning.
+Puedes probar el plugin utilizando `navigator.serviceWorker` o `fetch` en tu código, lo que deberá generar una advertencia en ESLint.
 
 ### ESLint en tu Editor
 
@@ -355,7 +355,7 @@ Todo lo que tenemos que hacer es crear dos nuevas tareas en `scripts`,` precommi
 
 🏁 Si ahora intenta hacer commit o push de su código, debería automaticamente correr la tarea `test`.
 
-If it does not work, it is possible that `yarn add --dev husky` did not install the Git Hooks properly. I never encountered this issue but it happens for some people. If that's your case, run `yarn add --dev husky --force`, and maybe post a note describing your situation in [this issue](https://github.com/typicode/husky/issues/84).
+Si esto no funciona, es posible que `yarn add --dev husky` no haya instalado los Git Hooks apropiadamente. Nunca he tenido este problema, pero a algunos les sucede. Si es tu caso, ejecuta `yarn add --dev husky --force`, y si te es posible escribe un comentario para describir tu situación [en este issue](https://github.com/typicode/husky/issues/84).
 
 **Nota**: Si está haciendo push justo después de un commit, puede utilizar `git push --no-verify` para evitar ejecutar todas las pruebas de nuevo.
 
