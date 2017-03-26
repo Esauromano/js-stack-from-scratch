@@ -1,4 +1,4 @@
-# Stack JavaScript desde Cero
+# Stack JavaScript desde cero
 
 [![Build Status](https://travis-ci.org/verekia/js-stack-from-scratch.svg?branch=master)](https://travis-ci.org/verekia/js-stack-from-scratch)
 [![Release](https://img.shields.io/github/release/verekia/js-stack-from-scratch.svg?style=flat-square)](https://github.com/verekia/js-stack-from-scratch/releases)
@@ -18,21 +18,21 @@
 
 Bienvenido a mi tutorial (@verekia) sobre el stack javascript: ** Stack Javascript desde Cero**.
 
-> 🎉 **Esta es la V2 del tutorial, con grandes cambios desde la edición de 2016. Puede ver la [Lista de Cambios](/CHANGELOG.md)!**
+> 🎉 **Esta es la V2 del tutorial, con grandes cambios desde la edición de 2016. Puedes ver la [Lista de Cambios](/CHANGELOG.md)!**
 
-Esta es una guía orientada a ensamblar un stack JavaScript. Requiere algunos conocimientos de programación general, y básicos de JavaScript. **Se centra en herramientas que abordaremos juntos** y ofreciendole el **ejemplo más simple posible** para cada herramientas. Puede ver este tutorial como *una manera de escribir su propia boilerplate desde cero*. Debido a que, el objetivo de este tutorial es ensamblar varias herramientas, no voy a entrar en detalles sobre como cada una trabaja individualmente. Consulte su documentación o encuentre otros tutoriales si desea adquirir un conocimiento más profundo en ellos.
+Esta es una guía orientada directamente a ensamblar un stack JavaScript. Requieres de algunos conocimientos generales de programación, y conceptos básicos de JavaScript. **Se centra en acoplar varias herramientas** y ofrecerle el **ejemplo más simple posible** para cada herramienta. Puedes ver este tutorial como *una manera de escribir tu propia boilerplate desde cero*. Debido a que el objetivo de este tutorial es ensamblar varias herramientas, no voy a entrar en detalles sobre como funciona cada una individualmente. Consulta la documentación o encuentra otros tutoriales si deseas adquirir un conocimiento más profundo en estas.
 
-No necesita usar este stack entero si va a construir una simple página web con una pocas interacciones de JS interactions obviamente (una combinación de Browserify/Webpack + Babel + jQuery es suficiente  para poder escribir código ES6 en archivos diferentes), pero si quieres crear una aplicación web que sea escalable, y necesitas ayuda para configurar las cosas, este tutorial será muy bueno para ti.
+No necesitas usar este stack entero si vas a construir una simple página web con pocas interacciones de JS (una combinación de Browserify/Webpack + Babel + jQuery es suficiente  para poder escribir código ES6 en archivos diferentes), pero si quieres crear una aplicación web que sea escalable, y necesitas ayuda para configurar las cosas, este tutorial será muy bueno para ti.
 
-Una gran parte de lo descrito en este tutorial usa React. Si estas comenzando y quieres aprender React, [create-react-app](https://github.com/facebookincubator/create-react-app) le permitirá levantar y correr rápidamente un entorno de React ya preconfigurado. Recomiendo este enfoque para quien se este incorporando a un equipo que este usando React y necesite ponerse al día con un ambiente de pruebas. En este tutorial no lo usaremos, porque quiero que entienda lo que esta sucede debajo de todo.
+Una gran parte de lo descrito en este tutorial usa React. Si estas comenzando y sólo quieres aprender React, [create-react-app](https://github.com/facebookincubator/create-react-app) te permitirá levantar y ejecutar rápidamente un entorno de React ya preconfigurado. Recomiendo este enfoque para quien se esté incorporando a un equipo que utilice React y necesite ponerse al día con un ambiente de pruebas. En este tutorial no utilizaremos React preconfigurado, porque quiero que entiendas todo lo que hay detrás de su funcionamiento.
 
-Los códigos de ejemplos estan disponibles en cada capítulo, puedes correlos todos usando `yarn && yarn start`. Sin embargo, recomiendo que escriba todo desde cero siguiendo las **instrucciones paso a paso**.
+Los códigos de los ejemplos estan disponibles en cada capítulo, puedes ejecutarlos usando `yarn && yarn start`. Sin embargo, te recomiendo que escribas todo desde cero siguiendo las **instrucciones paso a paso**.
 
-El código final esta disponible en el [repositorio JS-Stack-Boilerplate](https://github.com/verekia/js-stack-boilerplate), en el [releases](https://github.com/verekia/js-stack-from-scratch/releases). Así como también un [demo en vivo](https://js-stack.herokuapp.com/).
+El código final esta disponible en el [repositorio JS-Stack-Boilerplate](https://github.com/verekia/js-stack-boilerplate), en [releases](https://github.com/verekia/js-stack-from-scratch/releases). Así como también un [demo en vivo](https://js-stack.herokuapp.com/).
 
 Funciona en Linux, macOS, y Windows.
 
-## Tabla de Contenidos
+## Tabla de contenidos
 
 [01 - Node, Yarn, `package.json`](/tutorial/01-node-yarn-package-json.md#readme)
 
@@ -52,9 +52,9 @@ Funciona en Linux, macOS, y Windows.
 
 [09 - Travis, Coveralls, Heroku](/tutorial/09-travis-coveralls-heroku.md#readme)
 
-## Proximamente
+## Próximamente
 
-Configurando tu editor (Atom), MongoDB, Progressive Web App.
+Configura tu editor (Atom), MongoDB, Progressive Web App.
 
 ## Traducciones
 

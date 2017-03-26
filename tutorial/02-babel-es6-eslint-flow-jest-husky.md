@@ -152,6 +152,36 @@ Yo recomiendo leer la [documentación de ESLint sobre punto y comas](http://esli
 
 Soy consciente de que algunos de ustedes querrán seguir utilizando puntos y comas, lo que hará que el código proporcionado en este tutorial sea un inconveniente. Si estás usando este tutorial sólo para aprender, estoy seguro de que seguirá siendo soportable aprender sin punto y coma, hasta volver a usarlos en tus proyectos reales. Si desea utilizar el código proporcionado en este tutorial como una plantilla sin embargo, se requerirá un poco de reescritura, lo que debería ser bastante rápido con ESLint establecido para aplicar puntos y comas para guiarlo a través del proceso. Me disculpo si estás en ese caso.
 
+### Compat
+
+[Compat](https://github.com/amilajack/eslint-plugin-compat) es un plugin de ESLint que te advierte si estas utilizando algunas APIs de Javascript que no están disponibles en los navegadores que quieres soportar. Utiliza [Browserslist](https://github.com/ai/browserslist), que está basado en [Can I Use](http://caniuse.com/).
+
+- Ejecuta `yarn add --dev eslint-plugin-compat`
+
+- Agrega lo siguiente a tu `package.json`, para indicar que queremos dar soporte a navegadores con mas del 1% de la cuota de mercado.
+
+```json
+"browserslist": ["> 1%"],
+```
+
+- Edita tu archivvvvo `.eslintrc.json`:
+
+```json
+{
+  "extends": "airbnb",
+  "plugins": [
+    "compat"
+  ],
+  "rules": {
+    "semi": [2, "never"],
+    "no-unexpected-multiline": 2,
+    "compat/compat": 2
+  }
+}
+```
+
+Puedes probar el plugin utilizando `navigator.serviceWorker` o `fetch` en tu código, lo que deberá generar una advertencia en ESLint.
+
 ### ESLint en tu Editor
 
 En este capítulo configurará ESLint en la terminal, lo cual es una excelente manera de detectar errores en tiempo de construcción / antes de hacer pushing, pero también es posible que quiera integrarlo con su IDE para recibir una retroalimentación inmediata. NO use el linting ES6 nativo de su IDE. Configurelo que el binario que utiliza para linting sea el de su carpeta `node_modules` en su lugar. De esta manera puede utilizar todos los config de su proyecto, el preset Airbnb, etc. De lo contrario, sólo obtendrá un linting ES6 genérico.
@@ -324,6 +354,8 @@ Todo lo que tenemos que hacer es crear dos nuevas tareas en `scripts`,` precommi
 ```
 
 🏁 Si ahora intenta hacer commit o push de su código, debería automaticamente correr la tarea `test`.
+
+Si esto no funciona, es posible que `yarn add --dev husky` no haya instalado los Git Hooks apropiadamente. Nunca he tenido este problema, pero a algunos les sucede. Si es tu caso, ejecuta `yarn add --dev husky --force`, y si te es posible escribe un comentario para describir tu situación [en este issue](https://github.com/typicode/husky/issues/84).
 
 **Nota**: Si está haciendo push justo después de un commit, puede utilizar `git push --no-verify` para evitar ejecutar todas las pruebas de nuevo.
 
