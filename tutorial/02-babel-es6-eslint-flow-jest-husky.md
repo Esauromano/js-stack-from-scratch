@@ -216,11 +216,13 @@ Justo ahora, nuestro código JavaScript es código ES6 valido. Flow puede analiz
     "plugin:flowtype/recommended"
   ],
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "compat"
   ],
   "rules": {
     "semi": [2, "never"],
-    "no-unexpected-multiline": 2
+    "no-unexpected-multiline": 2,
+    "compat/compat": 2
   }
 }
 ```

@@ -54,7 +54,11 @@ Funciona en Linux, macOS, y Windows.
 
 ## Próximamente
 
+<<<<<<< HEAD
 Configura tu editor (Atom), MongoDB, Progressive Web App.
+=======
+Setting up your editor (Atom first), MongoDB, Progressive Web App, E2E testing.
+>>>>>>> 11d0fb2b8cba9f1638e3e5a2c99a3569e356c95e
 
 ## Traducciones
 
