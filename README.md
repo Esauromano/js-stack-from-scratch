@@ -62,7 +62,9 @@ Si deseas agregar tu traducción, por favor lea las [recomendaciones de traducci
 
 ### V2
 
-Your link here soon ;)
+- [Bulgarian](https://github.com/mihailgaberov/js-stack-from-scratch) by [mihailgaberov](http://github.com/mihailgaberov)
+- [Italian](https://github.com/fbertone/guida-javascript-moderno) by [Fabrizio Bertone](https://github.com/fbertone) - [fbertone.it](http://fbertone.it)
+- [Simplified Chinese](https://github.com/yepbug/js-stack-from-scratch/) by [@yepbug](https://github.com/yepbug)
 
 Consultas las [traducciones en curso](https://github.com/verekia/js-stack-from-scratch/issues/147).
 
